@@ -57,8 +57,8 @@ void test2(){
 	Mass1300->SetLineColor(3);
 	Mass1300->Draw("same");
 	
-	/*	
-	TLegend *leg = new TLegend(0.6504298,0.1518987,0.8667622,0.2658228,NULL,"brNDC");
+	
+	/*	TLegend *leg = new TLegend(0.6504298,0.1518987,0.8667622,0.2658228,NULL,"brNDC");
 	TLegendEntry *entry=leg->AddEntry("Mass300","300_"+newstring,"l");
 	entry->SetLineColor(1);
 	TLegendEntry *entry=leg->AddEntry("Mass700","700_"+newstring,"l");
@@ -66,7 +66,6 @@ void test2(){
 	TLegendEntry *entry=leg->AddEntry("Mass1300","1300_"+newstring,"l");
 	entry->SetLineColor(3);
 	leg->Draw();
-	*/
 	
 //	TFile *f = new TFile(newstring+".pdf","NEW");
 	
