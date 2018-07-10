@@ -38,10 +38,13 @@ void test(){
 	
 	char saythis[5000];
 	
-	sprintf(saythis, "c4%i",j);
+	TCanvas *c4[26];
 	
-	TCanvas *c4[26] = new TCanvas(saythis);
-	
+	for (int z=0; z<26; z++){
+		sprintf(saythis, "c4%i",z);
+		c4[z] =  new TCanvas(saythis)
+	}
+
 	for (int z=0; z<2 ; z++){
 	
 	c4[z]->cd();
@@ -71,7 +74,7 @@ void test(){
 	Mass1300->Draw("same");
 	
 	
-	TLegend *leg = new TLegend(0.6504298,0.1518987,0.8667622,0.2658228,NULL,"brNDC");
+/*	TLegend *leg = new TLegend(0.6504298,0.1518987,0.8667622,0.2658228,NULL,"brNDC");
 	TLegendEntry *entry=leg->AddEntry("Mass300","300_"+newstring,"l");
 	entry->SetLineColor(1);
 	TLegendEntry *entry=leg->AddEntry("Mass700","700_"+newstring,"l");
@@ -79,7 +82,7 @@ void test(){
 	TLegendEntry *entry=leg->AddEntry("Mass1300","1300_"+newstring,"l");
 	entry->SetLineColor(3);
 	leg->Draw();
-	
+*/	
 //	TFile *f = new TFile(newstring+".pdf","NEW");
 	
 	c4[z]->Print(newstring+".pdf");
