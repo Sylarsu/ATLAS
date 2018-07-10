@@ -6,31 +6,33 @@ TH1F* Mass300;
 TH1F* Mass700;
 TH1F* Mass1300;
 
-void test(){
+void test2(){
 	ifstream input;
 	
-	input.open("ListofN");
+	input.open("ListofN.txt");
 	
-	string ListofName[27];
+	string ListofName[28];
 	
-	for (int j=0; j<27 ; j++){
+	for (int j=0; j<28 ; j++){
 		
 	input >> ListofName[j];
+	
+	cout << ListofName[j] <<endl;
+	
 	}
 	
 	string mystr;
 	
-	for (int z=0; z<27 ; z++){
+	for (int z=2; z<28 ; z++){
 		
 	mystr = ListofName[z];
-	//cout << mystr << endl;
+	cout << mystr << endl;
 	
 	TFile *_file1 = TFile::Open("hist-DAOD_TRUTH1.test_ttbb_lh_300.root");
 	
 	TFile *_file2 = TFile::Open("hist-DAOD_TRUTH1.test_ttbb_lh_700.root");
 	
 	TFile *_file3 = TFile::Open("hist-DAOD_TRUTH1.test_ttbb_lh_1300.root");
-	
 	
 	Int_t ci;      // for color index setting
 	

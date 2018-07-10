@@ -13,6 +13,7 @@ void Ntest() {
 	while ((key1 = (TKey *) next1())) {
 		j++;
    }
+   cout << j << endl;
    	string y[j];
 	int i=0;
 	while ((key2 = (TKey *) next2())) {
@@ -22,7 +23,7 @@ void Ntest() {
 		
 	ofstream myfile;
 	
-	myfile.open("textfile.txt");
+	myfile.open("ListofN.txt");
 	
 	for (int z=0; z<j ; z++){
 	
