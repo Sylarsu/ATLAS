@@ -42,10 +42,10 @@ void test(){
 	
 	for (int z=0; z<26; z++){
 		sprintf(saythis, "c4%i",z);
-		c4[z] =  new TCanvas(saythis)
+		c4[z] =  new TCanvas(saythis);
 	}
 
-	for (int z=0; z<2 ; z++){
+	for (int z=0; z<26 ; z++){
 	
 	c4[z]->cd();
 	
@@ -66,12 +66,12 @@ void test(){
 	Mass1300 = (TH1F*)_file3->Get(newstring);
 	
 	
-	Mass300->GetYaxis()->SetRangeUser(0,700);
 	Mass300->Draw();
-	Mass700->SetLineColor(2);
+	Mass300->GetYaxis()->SetRangeUser(0,700);
 	Mass700->Draw("same");
-	Mass1300->SetLineColor(3);
+	Mass700->SetLineColor(2);
 	Mass1300->Draw("same");
+	Mass1300->SetLineColor(3);
 	
 	
 /*	TLegend *leg = new TLegend(0.6504298,0.1518987,0.8667622,0.2658228,NULL,"brNDC");
