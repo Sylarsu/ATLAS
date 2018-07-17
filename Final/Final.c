@@ -6,7 +6,7 @@ TH1F* Mass300;
 TH1F* Mass700;
 TH1F* Mass1300;
 
-void test2(){
+void Final(){
 	ifstream input;
 	
 	input.open("ListofN.txt");

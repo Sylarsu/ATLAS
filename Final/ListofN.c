@@ -3,7 +3,7 @@
 #include <fstream>
 
 
-void Ntest() {
+void ListofN() {
 	TFile *file = new TFile("hist-DAOD_TRUTH1.test_ttbb_lh_300.root");
 	TKey *key1;
 	TKey *key2;
