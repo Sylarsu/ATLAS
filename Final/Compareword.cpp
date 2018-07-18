@@ -5,17 +5,20 @@
 #include <string.h>
 
 using namespace std;
-std::string a ("hello word");
+std::string a ("abc");
 
 
-void RfileNrc(){
+int main(){
   std::string word;
   cout << "guss what is inside" << endl;
-  cin >> word;
-  if(word.compare(a)<0){
-    std::cout<<"you got it"<<endl;
-    }else{
-    std::cout<< "hha, you missed it, guss again"<<endl;
-    RfileNrc();
-    }
+  getline(std::cin , word);
+  int i;
+  i = 0;
+  if(a.compare(i,word.size(),word)&&i>a.size()){
+    i++;
+  std::cout<< "hha, you missed it, guss again"<<endl;
+  main();
+  }else{
+    std::cout << "yosylar@rhel6-64.slac.stanford.eduu got it"<<endl;
+  }
 }

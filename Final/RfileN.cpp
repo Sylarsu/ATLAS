@@ -1,18 +1,30 @@
-#include <iostream>
 #include <dirent.h>
+#include <cstdlib>
+#include <iostream>
+#include <fstream>
+#include <string.h>
 
-main(){
+using namespace std;
+
+int main(){
     DIR *dir;
     struct dirent *ent;
-    if ((dir = opendir ("C:\\Users\\Sylar\\OneDrive\\Documents\\Class\\Research\\ATLAS\\submitDir")) != NULL) {
+    std::string word;
+    if ((dir = opendir ("/gpfs/slac/atlas/fs1/u/sylar/ATLAS/Final/submitDir")) != NULL) {
       /* print all the files and directories within directory */
+      cout << "what element you are looking for?"<< endl;
+      cin >> word;
       while ((ent = readdir (dir)) != NULL) {
-        printf ("%s\n", ent->d_name);
+	if(word.compare(ent->d_name)!=0){
+	  std::cout <<  ent->d_name << endl;
+	}else{
+	  std::cout<<"no documents found"<<endl;
+	}
       }
       closedir (dir);
-      } else {
+    }else {
       /* could not open directory */
       perror ("");
-      return EXIT_FAILURE;
+      //      return EXIT_FAILURE;
     }
 }
